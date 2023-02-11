@@ -1,0 +1,35 @@
+[
+  {
+    "model": "randrapi.river",
+    "pk": 1,
+    "fields": {
+      "name": "Ocoee River",
+      "blurb": "more lorem ipsum",
+      "photo": "https://tinyurl.com/yc65md97",
+      "location": 1,
+      "rapid": 1
+    }
+  },
+  {
+    "model": "randrapi.river",
+    "pk": 2,
+    "fields": {
+      "name": "Harpeth River",
+      "blurb": "more lorem ipsum",
+      "photo": "https://tinyurl.com/mrxm77jt",
+      "location": 2,
+      "rapid": 2
+    }
+  },
+  {
+    "model": "randrapi.river",
+    "pk": 3,
+    "fields": {
+      "name": "Buffalo River",
+      "blurb": "more lorem ipsum",
+      "photo": "https://tinyurl.com/5bjv3uyv",
+      "location": 3,
+      "rapid": 3
+    }
+  }
+]

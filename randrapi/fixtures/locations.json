@@ -1,0 +1,32 @@
+[
+  {
+    "model": "randrapi.location",
+    "pk": 1,
+    "fields": {
+      "uid": 1,
+      "name": "Ocoee, TN",
+      "blurb": "lorem ipsum lorem ipsum lorem ipsum",
+      "photo": "https://tinyurl.com/3n8tr94d"
+    }
+  },
+  {
+    "model": "randrapi.location",
+    "pk": 2,
+    "fields": {
+      "uid": 1,
+      "name": "Lewisburg, TN",
+      "blurb": "lorem ipsum lorem ipsum lorem ipsum",
+      "photo": "https://tinyurl.com/2a678vjt"
+    }
+  },
+  {
+    "model": "randrapi.location",
+    "pk": 3,
+    "fields": {
+      "uid": 1,
+      "name": "Kingston Springs, TN",
+      "blurb": "lorem ipsum lorem ipsum lorem ipsum",
+      "photo": "https://tinyurl.com/5n8s58jf"
+    }
+  }
+]
