@@ -8,7 +8,7 @@ class River(models.Model):
   blurb = models.CharField(max_length=250)
   photo = models.URLField()
   location = models.ForeignKey(Location, on_delete=models.CASCADE)
-  rapid = models.ForeignKey(Rapid, on_delete=models.CASCADE)
+  # rapid = models.ForeignKey(Rapid, on_delete=models.CASCADE)
   
 def __str__(self):
   return self.name

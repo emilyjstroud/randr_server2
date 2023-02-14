@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
-from randrapi.views import LocationView 
+from randrapi.views import LocationView, RapidView, RiverView, RiverRapidView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'locations', LocationView, 'location')
+router.register(r'rapids', RapidView, 'rapid')
+router.register(r'rivers', RiverView, 'river')
+router.register(r'river_rapids', RiverRapidView, 'river_rapid')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
