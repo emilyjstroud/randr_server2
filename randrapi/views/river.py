@@ -14,7 +14,7 @@ class RiverView(ViewSet):
     return Response(serializer.data)
   
   def list(self, request):
-    rivers= River.objects.all()
+    rivers = River.objects.all()
     
     location = request.query_params.get('location', None)
     if location is not None:
