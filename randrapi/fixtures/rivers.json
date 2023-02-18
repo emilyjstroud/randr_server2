@@ -6,8 +6,7 @@
       "name": "Ocoee River",
       "blurb": "more lorem ipsum",
       "photo": "https://tinyurl.com/yc65md97",
-      "location": 1,
-      "rapid": 1
+      "location": 1
     }
   },
   {
@@ -17,8 +16,7 @@
       "name": "Harpeth River",
       "blurb": "more lorem ipsum",
       "photo": "https://tinyurl.com/mrxm77jt",
-      "location": 2,
-      "rapid": 2
+      "location": 2
     }
   },
   {
@@ -28,8 +26,7 @@
       "name": "Buffalo River",
       "blurb": "more lorem ipsum",
       "photo": "https://tinyurl.com/5bjv3uyv",
-      "location": 3,
-      "rapid": 3
+      "location": 3
     }
   }
 ]

@@ -56,15 +56,15 @@ class RiverView(ViewSet):
     
     river.save()
     
-    river_rapid = River.objects.filter(river)
+    # river_rapid = River.objects.filter(river)
     
-    if river_rapid is not None:
-      for rapid in river_rapid:
-        rapid.delete()
+    # if river_rapid is not None:
+    #   for rapid in river_rapid:
+    #     rapid.delete()
         
-    if rapid is not None:
-      for rapid in rapid:
-        Rapid.objects.create(river, river = River.get(pk = rapid))
+    # if rapid is not None:
+    #   for rapid in rapid:
+    #     Rapid.objects.create(river, river = River.get(pk = rapid))
         
     return Response(None, status=status.HTTP_204_NO_CONTENT)
       
