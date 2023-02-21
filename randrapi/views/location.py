@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from randrapi.models import Location
+from randrapi.models import Location, User
 
 class LocationView(ViewSet):
   
@@ -18,17 +18,20 @@ class LocationView(ViewSet):
     
     uid_query = request.query_params.get('uid', None)
     if uid_query is not None:
-      locations = locations.filter(uid_query)
+      locations = locations.filter(user=uid_query)
     serializer = LocationSerializer(locations, many = True)
     return Response(serializer.data)
   
   def create(self, request):
     
+    user = User.objects.get(uid=request.data["user"])
+    print(user.__dict__)
+    
     location = Location.objects.create(
       name = request.data['name'],
       blurb = request.data['blurb'],
       photo = request.data['photo'],
-      uid = request.data['uid']
+      user = user.uid
     )
     serializer = LocationSerializer(location)
     return Response(serializer.data)
@@ -40,7 +43,7 @@ class LocationView(ViewSet):
     location.name = request.data['name']
     location.blurb = request.data['blurb']
     location.photo = request.data['photo']
-    location.uid = request.data['uid']
+    location.user = request.data['user']
     location.save()
     
     return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -54,7 +57,7 @@ class LocationSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Location
-    fields = ('id', 'name', 'blurb', 'photo', 'uid')
+    fields = ('id', 'user', 'name', 'blurb', 'photo')
     depth = 1
     
     
