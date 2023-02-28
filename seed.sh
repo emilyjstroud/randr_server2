@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf levelupapi/migrations
+rm -rf randrapi/migrations
 rm db.sqlite3
 python3 manage.py migrate
 python3 manage.py makemigrations randrapi

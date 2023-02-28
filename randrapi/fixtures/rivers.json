@@ -3,30 +3,36 @@
     "model": "randrapi.river",
     "pk": 1,
     "fields": {
+      "id": 1,
       "name": "Ocoee River",
       "blurb": "more lorem ipsum",
       "photo": "https://tinyurl.com/yc65md97",
-      "location": 1
+      "location": 1,
+      "rapids": 1
     }
   },
   {
     "model": "randrapi.river",
     "pk": 2,
     "fields": {
+      "id": 2,
       "name": "Harpeth River",
       "blurb": "more lorem ipsum",
       "photo": "https://tinyurl.com/mrxm77jt",
-      "location": 2
+      "location": 2,
+      "rapids": 2
     }
   },
   {
     "model": "randrapi.river",
     "pk": 3,
     "fields": {
+      "id": 3,
       "name": "Buffalo River",
       "blurb": "more lorem ipsum",
       "photo": "https://tinyurl.com/5bjv3uyv",
-      "location": 3
+      "location": 3,
+      "rapids": 3
     }
   }
 ]

@@ -15,10 +15,12 @@ class RiverView(ViewSet):
   
   def list(self, request):
     rivers = River.objects.all()
-    
     location = request.query_params.get('location', None)
+    
     if location is not None:
-      rivers = rivers.filter(location_id=location)
+      # rivers = rivers.filter(location_id=location)
+      rivers = rivers.filter(river_id = river)
+      river = request.query_params.get('river_id', None)
       
     serializer = RiverSerializer(rivers, many = True)
     return Response(serializer.data)
@@ -77,5 +79,11 @@ class RiverSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = River
-    fields = ('id', 'name', 'blurb', 'photo', 'location')
+    fields = ('id', 'name', 'blurb', 'photo', 'location', 'rapids')
     depth = 1
+
+# class RiverRapidsView(generics.ListCreateAPIView):
+#   serializer_class = RapidSerializer
+#   def get_queryset(self):
+#     river_id = self.kwargs('river_id')
+#     return Rapid.objects.filter(river__id=river_id)

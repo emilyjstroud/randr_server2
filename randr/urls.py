@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from randrapi.views import register_user, check_user
-from randrapi.views import UserView, LocationView, RapidView, RiverView, RiverRapidView
+from randrapi.views import UserView, LocationView, RapidView, RiverView, RiverRapidView, RiverRapidsView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'user')
@@ -32,4 +32,6 @@ urlpatterns = [
     path('register', register_user),
     path('checkuser', check_user),
     path('', include(router.urls)),
+    path('riverrapids/<int:river_id>', RiverRapidsView.as_view(), name='riverrapids'),
+
 ]

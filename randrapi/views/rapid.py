@@ -3,6 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from randrapi.models import Rapid
+from rest_framework import generics
 
 class RapidView(ViewSet):
   
@@ -41,3 +42,9 @@ class RapidSerializer(serializers.ModelSerializer):
       model = Rapid
       fields = ('level', 'id')
       depth = 1
+
+class RiverRapidsView(generics.ListCreateAPIView):
+  serializer_class = RapidSerializer
+  def get_queryset(self):
+    river_id = self.kwargs('river_id')
+    return Rapid.objects.filter(river__id=river_id)
