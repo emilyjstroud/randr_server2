@@ -9,16 +9,19 @@ class RiverRapidView(ViewSet):
   def retrieve(self, request, pk):
     river_rapid = River_Rapid.objects.get(pk=pk)
     serializer = RiverRapidSerializer(river_rapid)
+    print('retrieve')
     return Response(serializer.data)
   
   def list(self, request):
     river_rapids = River_Rapid.objects.all()
+    print(river_rapids)
     
     river = request.query_params.get('river', None)
     if river is not None:
-      river_rapids.filter(river_id = river)
-      
-    serializer = RiverRapidSerializer(river_rapids, many = True)
+      new_river_rapids = river_rapids.filter(river_id = river)
+      print(new_river_rapids)
+    serializer = RiverRapidSerializer(new_river_rapids, many = True)
+
     return Response(serializer.data)
   
   def create(self, request):
