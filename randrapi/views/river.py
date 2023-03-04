@@ -61,7 +61,7 @@ class RiverView(ViewSet):
     
     if river_rapids is not None: # checks to see if there is a river_rapid list and if it is empty or not
       delete_river_rapids = river_rapids.filter(river_id = river) # filters thru rivers to be able to delete the rapids on that specific river
-      if delete_river_rapids is not None: # if there are rapids thst do exist in that list,
+      if delete_river_rapids is not None: # if there are rapids that do exist in that list,
         for rapid in delete_river_rapids:
           rapid.delete() # delete them
         
