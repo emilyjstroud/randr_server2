@@ -32,6 +32,6 @@ urlpatterns = [
     path('register', register_user),
     path('checkuser', check_user),
     path('', include(router.urls)),
-    path('riverrapids/<int:river_id>', RiverRapidsView.as_view(), name='riverrapids'),
+    # path('riverrapids/<int:river_id>', RiverRapidsView.as_view(), name='riverrapids'),
 
 ]
