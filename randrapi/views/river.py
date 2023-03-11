@@ -85,9 +85,3 @@ class RiverSerializer(serializers.ModelSerializer):
     model = River
     fields = ('id', 'name', 'blurb', 'photo', 'location', 'rapids')
     depth = 1
-
-# class RiverRapidsView(generics.ListCreateAPIView):
-#   serializer_class = RapidSerializer
-#   def get_queryset(self):
-#     river_id = self.kwargs('river_id')
-#     return Rapid.objects.filter(river__id=river_id)
