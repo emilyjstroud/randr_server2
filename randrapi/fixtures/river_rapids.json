@@ -1,0 +1,26 @@
+[
+  {
+    "model": "randrapi.river_rapid",
+    "pk": 1,
+    "fields": {
+      "river": 1,
+      "rapid": 1
+    }
+  },
+  {
+    "model": "randrapi.river_rapid",
+    "pk": 2,
+    "fields": {
+      "river": 2,
+      "rapid": 2
+    }
+  },
+  {
+    "model": "randrapi.river_rapid",
+    "pk": 3,
+    "fields": {
+      "river": 3,
+      "rapid": 3
+    }
+  }
+]

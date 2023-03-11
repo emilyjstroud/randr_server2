@@ -1,0 +1,23 @@
+[
+  {
+    "model": "randrapi.rapid",
+    "pk": 1,
+    "fields": {
+      "level": 1
+    }
+  },
+  {
+    "model": "randrapi.rapid",
+    "pk": 2,
+    "fields": {
+      "level": 2
+    }
+  },
+  {
+    "model": "randrapi.rapid",
+    "pk": 3,
+    "fields": {
+      "level": 3
+    }
+  }
+]

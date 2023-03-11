@@ -15,7 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from rest_framework import routers
+from randrapi.views import register_user, check_user
+from randrapi.views import UserView, LocationView, RapidView, RiverView, RiverRapidView, RiverRapidsView
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'users', UserView, 'user')
+router.register(r'locations', LocationView, 'location')
+router.register(r'rapids', RapidView, 'rapid')
+router.register(r'rivers', RiverView, 'river')
+router.register(r'river_rapids', RiverRapidView, 'river_rapid')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register', register_user),
+    path('checkuser', check_user),
+    path('', include(router.urls)),
+    # path('riverrapids/<int:river_id>', RiverRapidsView.as_view(), name='riverrapids'),
+
 ]
